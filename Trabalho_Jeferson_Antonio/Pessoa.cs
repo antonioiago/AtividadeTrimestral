@@ -8,11 +8,12 @@ namespace Trabalho_jeferson_antonio
 {
     internal class Pessoa
     {
-        protected string nome;
-        protected int cpf;
-        protected int idade;
-        protected string gênero;
-        protected string endereço;
+        private string nome;
+        private int cpf;
+        private  int idade;
+        private  string gênero;
+        private string endereço;
     }
 
 }
+
