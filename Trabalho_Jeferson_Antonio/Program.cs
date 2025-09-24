@@ -1,6 +1,6 @@
 using System;
 
-namespace projetohosp
+namespace projetohospital
 {
     public class Program
     {
@@ -23,9 +23,10 @@ namespace projetohosp
                 else if (opcao == "2") hospital.ListarPacientes();
                 else if (opcao == "3") hospital.AtenderPaciente();
                 else if (opcao == "4") hospital.AlterarPaciente();
-                else if (opcao == "q") Console.WriteLine("Saindo...");
+                else if (opcao == "q") Console.WriteLine("Saindo do programa...");
                 else Console.WriteLine("Opcao invalida");
             }
         }
     }
 }
+
