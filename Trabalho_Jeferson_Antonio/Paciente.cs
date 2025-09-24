@@ -1,8 +1,9 @@
 using System;
+using projetohospital;
 
 namespace projetohospital
 {
-     class Paciente
+    class Paciente
     {
         public Pessoa[] fila = new Pessoa[15];
         public int numeroDePacientes = 0;
@@ -31,7 +32,7 @@ namespace projetohospital
             else fila[numeroDePacientes] = novo;
 
             numeroDePacientes++;
-            Console.WriteLine("O paciente foi cadastrado com sucesso");
+            Console.WriteLine("\nO paciente foi cadastrado com sucesso\n");
         }
 
         public void ListarPacientes()
@@ -110,4 +111,3 @@ namespace projetohospital
         }
     }
 }
-
