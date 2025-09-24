@@ -1,8 +1,8 @@
 using System;
 
-namespace projetohosp
+namespace projetohospital
 {
-    public class Paciente
+     class Paciente
     {
         public Pessoa[] fila = new Pessoa[15];
         public int numeroDePacientes = 0;
@@ -11,12 +11,12 @@ namespace projetohosp
         {
             if (numeroDePacientes >= 15)
             {
-                Console.WriteLine("A fila está cheia!");
+                Console.WriteLine("A fila do hospital está cheia!");
                 return;
             }
 
             Pessoa novo = new Pessoa();
-            Console.Write("Nome do paciente: ");
+            Console.Write("Nome do paciente que vai ser cadastrado: ");
             novo.Nome = Console.ReadLine();
             Console.Write("Preferencial? (1 = sim, 0 = nao): ");
             novo.Preferencial = int.Parse(Console.ReadLine());
@@ -31,14 +31,14 @@ namespace projetohosp
             else fila[numeroDePacientes] = novo;
 
             numeroDePacientes++;
-            Console.WriteLine("Paciente cadastrado!");
+            Console.WriteLine("O paciente foi cadastrado com sucesso");
         }
 
         public void ListarPacientes()
         {
             if (numeroDePacientes == 0)
             {
-                Console.WriteLine("Fila vazia.");
+                Console.WriteLine("A fila do hospital esta vazia");
                 return;
             }
 
@@ -60,11 +60,11 @@ namespace projetohosp
         {
             if (numeroDePacientes == 0)
             {
-                Console.WriteLine("Nao ha pacientes.");
+                Console.WriteLine("Nao ha pacientes na fila.");
                 return;
             }
 
-            Console.WriteLine("Atendendo: " + fila[0].Nome);
+            Console.WriteLine("Atendendo paciente da fila: " + fila[0].Nome);
             for (int i = 0; i < numeroDePacientes - 1; i++) fila[i] = fila[i + 1];
             numeroDePacientes--;
         }
@@ -73,7 +73,7 @@ namespace projetohosp
         {
             if (numeroDePacientes == 0)
             {
-                Console.WriteLine("Fila vazia.");
+                Console.WriteLine("Nao ha pacientes na fila");
                 return;
             }
 
@@ -82,15 +82,15 @@ namespace projetohosp
             int num = int.Parse(Console.ReadLine());
             if (num <= 0 || num > numeroDePacientes)
             {
-                Console.WriteLine("Numero invalido.");
+                Console.WriteLine("Este numero esta invalido.");
                 return;
             }
 
             int indice = num - 1;
             Pessoa p = fila[indice];
-            Console.Write("Novo nome: ");
+            Console.Write("Digite o novo nome do paciente que vc deseja cadastrar: ");
             p.Nome = Console.ReadLine();
-            Console.Write("Preferencial? (1 = sim, 0 = nao): ");
+            Console.Write("O paciente e preferencial? (1 = sim, 0 = nao): ");
             p.Preferencial = int.Parse(Console.ReadLine());
 
             for (int i = indice; i < numeroDePacientes - 1; i++) fila[i] = fila[i + 1];
@@ -110,3 +110,4 @@ namespace projetohosp
         }
     }
 }
+
