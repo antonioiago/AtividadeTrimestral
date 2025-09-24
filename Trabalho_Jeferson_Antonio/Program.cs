@@ -2,7 +2,7 @@ using System;
 
 namespace projetohospital
 {
-    public class Program
+     class Program
     {
         public static void Main(string[] args)
         {
@@ -30,5 +30,6 @@ namespace projetohospital
         }
     }
 }
+
 
 
