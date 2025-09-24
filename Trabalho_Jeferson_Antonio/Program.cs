@@ -11,12 +11,13 @@ namespace projetohospital
 
             while (opcao != "q")
             {
-                Console.WriteLine("1 - Cadastrar");
-                Console.WriteLine("2 - Listar");
-                Console.WriteLine("3 - Atender");
-                Console.WriteLine("4 - Alterar");
-                Console.WriteLine("q - Sair");
-                Console.Write("Opcao: ");
+                Console.WriteLine("----------Menu de escolha---------");
+                Console.WriteLine("1 - Cadastre pacientes");
+                Console.WriteLine("2 - Liste os pacientes");
+                Console.WriteLine("3 - Atender os pacientes");
+                Console.WriteLine("4 - Altere os dados dos pacientes");
+                Console.WriteLine("q - Sair do programa");
+                Console.Write("escolha para aonde deseja ir: ");
                 opcao = Console.ReadLine();
 
                 if (opcao == "1") hospital.CadastrarPaciente();
@@ -29,4 +30,5 @@ namespace projetohospital
         }
     }
 }
+
 
